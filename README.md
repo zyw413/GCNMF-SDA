@@ -1,5 +1,4 @@
 # GCNMF-SDA:Predicting snoRNA-disease associations based on graph convolution and non-negative matrix factorization
-![GCNMF-SDA](GCNMF-SDA.png)
 
 ## <span style="color:red">data</span>
 
