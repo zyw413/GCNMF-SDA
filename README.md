@@ -1,13 +1,19 @@
+![Uploading 架构流程图9.png…]()
+
 # run main.py to run our model
 
-#### GIPK-d.np 是疾病的GIPK相似性
+## data
 
-#### GIPK-s.np 是snoRNA的GIPK相似性
+### GIPK-d.np and GIPK-s.np :GIPK similarity of snoRNA and disease
 
-#### sno_p2p-smith.csv 是snoRNA的序列相似性
+### sno_p2p-smith.csv:Sequence similarity of snoRNA
 
-#### disease_similarity.csv 是疾病的语义相似性
+### sno_d2d_do.csv and sno_mesh_do.csv:Two kinds of disease semantic similarity; disease_similarity.csv:Semantic Similarity of Comprehensive
 
-#### s_fusion.csv 是snoRNA融合后的相似性
+### s_fusion.csv: snoRNA similarity after using SNF fusion
 
-#### d_fusion.csv 是疾病相似性融合后的相似性
+### d_fusion.csv: disease similarity after using SNF fusion
+
+## code 
+### utils.py: Methods of data processing
+### main.py: run GCNMF-SDA model
