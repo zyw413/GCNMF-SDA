@@ -1,9 +1,10 @@
 # GCNMF-SDA:Predicting snoRNA-disease associations based on graph convolution and non-negative matrix factorization
 ![GCNMF-SDA](GCNMF-SDA.png)
 
-## data
+## <span style="color:red">data</span>
 
-### ass.txt:
+### ass.txt: snoRNA and disease association data>
+
 ### GIPK-d.np and GIPK-s.np :GIPK similarity of snoRNA and disease
 
 ### sno_p2p-smith.csv:Sequence similarity of snoRNA
@@ -14,6 +15,8 @@
 
 ### d_fusion.csv: disease similarity after using SNF fusion
 
-## code 
+## <span style="color:red">code </span>
+
 ### utils.py: Methods of data processing
+
 ### main.py: run GCNMF-SDA model
