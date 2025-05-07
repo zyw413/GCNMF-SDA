@@ -1,4 +1,4 @@
-![Uploading 架构流程图9.png…]()
+![示例图片]([images/example.png](https://github.com/zyw413/GCNMF-SDA))
 
 # run main.py to run our model
 
