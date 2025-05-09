@@ -114,14 +114,14 @@ fold = 0
 result = np.zeros((1, 7), float)
 K=5
 D = 45
-adj = pd.read_csv(r'G:/Python/GCNMF-SDA/data/adj_index.csv',index_col=0,header=0)
-ss = pd.read_csv('G:/Python/GCNMF-SDA/data/s_fusion.csv', index_col=0).to_numpy()
-ds = pd.read_csv('G:/Python/GCNMF-SDA/data/d_fusion.csv', index_col=0).to_numpy()
-association = pd.read_csv("G:/Python/GCNMF-SDA/data/adj_index.csv", index_col=0).to_numpy()
+adj = pd.read_csv(r'../data/adj_index.csv',index_col=0,header=0)
+ss = pd.read_csv('../data/s_fusion.csv', index_col=0).to_numpy()
+ds = pd.read_csv('../data/d_fusion.csv', index_col=0).to_numpy()
+association = pd.read_csv("../data/adj_index.csv", index_col=0).to_numpy()
 A_WKNKN=WKNKN(association,ds,ss,K)
 A_WKNKN_df = pd.DataFrame(A_WKNKN).to_numpy()
 nmf_s, nmf_d = get_low_feature(D, 0.01, pow(10, -4), A_WKNKN)
-ass_path = 'G:/Python/GCNMF-SDA/data/ass.txt'
+ass_path = '../data/ass.txt'
 ss=pd.DataFrame(ss)
 ds=pd.DataFrame(ds)
 gcn_s,gcn_d=extract_gcn_features(ass_path, ss, ds,A_WKNKN)
