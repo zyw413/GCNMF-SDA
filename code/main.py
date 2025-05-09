@@ -9,8 +9,12 @@ from scipy import interp
 import numpy as np
 import warnings
 from utils import *
-
 warnings.filterwarnings("ignore")
+seed = 2024
+np.random.seed(seed)
+torch.manual_seed(seed)
+if torch.cuda.is_available():
+    torch.cuda.manual_seed_all(seed)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # === EarlyStopping by AUC ===
 class EarlyStoppingAUC:
@@ -67,8 +71,8 @@ class MLP(nn.Module):
 
 def samples_choose(rel_adj_mat, features_embedding_rna, features_embedding_dis, negative_sample_times=1, seed=42):
     # 设置随机种子
-    np.random.seed(seed)
-    torch.manual_seed(seed)
+    # np.random.seed(seed)
+    # torch.manual_seed(seed)
 
     X, y = [], []
 
