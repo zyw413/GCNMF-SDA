@@ -10,7 +10,7 @@
 
 ## <span style="color:red">data</span>
 
-* ### ass.txt: snoRNA and disease association data>
+* ### ass.txt: snoRNA and disease association data
 
 * ### GIPK-d.np and GIPK-s.np :GIPK similarity of snoRNA and disease
 
