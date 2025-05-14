@@ -27,3 +27,4 @@
 * ### utils.py: Methods of data processing
 
 * ### main.py: run GCNMF-SDA model
+* ### DEG.py: DEG analysis of unvalidated snoRNAs
