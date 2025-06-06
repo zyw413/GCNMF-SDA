@@ -11,7 +11,7 @@
 ## <span style="color:red">data</span>
 
 * ### ass.txt: snoRNA and disease association data
-
+* ### adj_index.csv：snoRNA and disease association matrix
 * ### GIPK-d.np and GIPK-s.np :GIPK similarity of snoRNA and disease
 
 * ### sno_p2p-smith.csv:Sequence similarity of snoRNA
@@ -24,7 +24,33 @@
 
 ## <span style="color:red">code </span>
 
-* ### utils.py: Methods of data processing
+###  utils.py
+- Methods for data processing.
 
-* ### main.py: run GCNMF-SDA model
-* ### DEG.py: DEG analysis of unvalidated snoRNAs
+---
+
+###  main.py
+- Run the GCNMF-SDA model.
+
+####  Load Data
+- Files: `s_fusion.csv`, `d_fusion.csv`, `adj_index.csv`, and `ass.txt`.
+
+####  Feature Extraction
+- `get_low_feature()`: SnoRNA extraction and disease characterization using NMF.
+- `extract_gcn_features()`: SnoRNA extraction and disease characterization using GCN.
+
+####  Negative Sample Selection
+- `samples_choose()`: Constructs balanced datasets by selecting negative samples corresponding to positive samples.
+
+####  5-Fold Cross Validation
+- `StratifiedKFold()`: Splits the balanced dataset evenly into 5 folds.
+- `EarlyStoppingAUC()`: AUC-based early stopping strategy and preserving model weights.
+
+####  Prediction
+- `checkpoint.pt`: weights of the trained model.
+- `model.load_state_dict(torch.load('checkpoint.pt'))`: Loads the trained model weights for prediction.
+
+---
+
+###  DEG.py
+- DEG analysis for unvalidated snoRNAs.
