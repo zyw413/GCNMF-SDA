@@ -46,11 +46,12 @@
 - `StratifiedKFold()`: Splits the balanced dataset evenly into 5 folds.
 - `EarlyStoppingAUC()`: AUC-based early stopping strategy and preserving model weights.
 
-####  Prediction
-- `checkpoint.pt`: weights of the trained model.
-- `model.load_state_dict(torch.load('checkpoint.pt'))`: Loads the trained model weights for prediction.
+
 
 ---
-
+### predict.py
+- Importing model weights for prediction.
+-  `checkpoint.pt`: weights of the trained model.
+- `model.load_state_dict(torch.load('checkpoint.pt'))`: Loads the trained model weights for prediction.
 ###  DEG.py
 - DEG analysis for unvalidated snoRNAs.
