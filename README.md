@@ -1,5 +1,5 @@
 # GCNMF-SDA:Predicting snoRNA-disease associations based on graph convolution and non-negative matrix factorization
-![本地图片](model.png)
+![](model.png)
 ## Requirements
 * ### dgl == 2.0.0
 * ### python == 3.9
