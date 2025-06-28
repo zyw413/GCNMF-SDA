@@ -5,7 +5,6 @@ import numpy as np
 from utils import *
 import os
 
-# 复制samples_choose函数
 
 def samples_choose(rel_adj_mat, features_embedding_rna, features_embedding_dis, negative_sample_times=1, seed=42):
     X, y = [], []
@@ -32,7 +31,7 @@ def samples_choose(rel_adj_mat, features_embedding_rna, features_embedding_dis, 
     y = torch.FloatTensor(y)
     return X, y
 
-# 设备
+
 seed = 2021
 np.random.seed(seed)
 torch.manual_seed(seed)
@@ -40,7 +39,6 @@ if torch.cuda.is_available():
     torch.cuda.manual_seed_all(seed)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-# 定义MLP，与main.py保持一致
 class MLP(nn.Module):
     def __init__(self, in_dim, hidden_dim, hidden_dim1, out_dim, dropout):
         super(MLP, self).__init__()
